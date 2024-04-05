@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "Changa", sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  color: white;
+  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,
+    0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.score {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  font-weight: 1000;
+}
+
+.current-score,
+.best-score,
+.current-streak,
+.max-streak,
+.time-taken,
+.quickest {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  color: white;
+  border: black 0.2rem solid;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black,
+    0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+  letter-spacing: 1px;
+}
+
+.quickest {
+  width: 150px;
+  height: 150px;
+}
+ 
+.score p {
+  position: relative;
+  padding-top: 0.9rem;
+}
+
+span {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.bg-image {
+  width: 600px;
+  height: 600px;
+  border: 0.2rem solid black;
+  background-image: url("https://i5.walmartimages.com/asr/be770ef3-a78b-400c-be69-b9b5b70d8166.fc0726071dfc215e2adb40f6c6bf080f.jpeg"); /* master ball */
+  background-size: 100%;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+img {
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 100%;
+}
+
+.img-dark {
+  filter: contrast(0) brightness(0);
+}
+
+.input-box {
+  /* transform: translate(100%, 0%); */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input {
+  font-size: 2.2rem;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.5rem;
+  font-weight: 600;
+  width: 50%;
+  border: 0.15rem solid black;
+}
+
+input:focus {
+  border: none;
+}
+
+.correct {
+  background-color: lime;
+}
+
+.idk-btn,
+.hint-btn {
+  background-color: transparent;
+  border: transparent;
+  font-size: 1.3rem;
+}
+
+.idk-hint {
+  /* position: absolute; */
+  display: flex;
+  gap: 5rem;
+  font-weight: 1000;
+}
+
+#hint {
+  visibility: hidden;
+  /* transform: translate(-50%, 250%); */
+  font-size: 1.5rem;
+  font-weight: 1000;
+  width: 1000px;
+}
+
+.idk-btn:hover,
+.hint-btn:hover,
+.reload-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
