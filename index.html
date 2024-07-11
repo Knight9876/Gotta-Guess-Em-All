@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Nova+Square&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <title>Gotta Guess'Em All</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="alert">
+        If you are playing this game on mobile, tablets, etc, kindly open your browser's menu and click desktop site. Thank You!!! <br> <span>Click anywhere to continue.</span>
+      </div>
+      <div class="title">
+        <h1>Gotta Guess'Em All</h1>
+      </div>
+      <div class="score">
+        <div class="current-score">
+          <p class="p1">Current</p>
+          <span id="current"></span>
+        </div>
+        <div class="best-score">
+          <p class="p2">Best</p>
+          <span id="best"></span>
+        </div>
+        <div class="current-streak">
+          <p class="p3">Streak</p>
+          <span id="streak"></span>
+        </div>
+        <div class="max-streak">
+          <p class="p3">Max</p>
+          <span id="max"></span>
+        </div>
+        <div class="time-taken">
+          <p class="p4">Time</p>
+          <span id="time"></span>
+        </div>
+        <div class="quickest">
+          <p class="p5">Quick</p>
+          <span id="quick"></span>
+        </div>
+      </div>
+      <div class="center">
+        <div class="bg-image">
+          <div class="overlay"></div>
+          <img src="" alt="" class="img-dark" />
+        </div>
+        <div class="input-box">
+          <input type="text" id="pokemon-name" value="" />
+          <div class="idk-hint">
+            <button type="button" class="idk-btn">I Don't Know?</button>
+            <button type="button" class="hint-btn">Hint</button>
+          </div>
+          <p id="hint"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js").then(
+            (registration) => {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            (err) => {
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      }
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
