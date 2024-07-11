@@ -11,6 +11,7 @@ var quick = document.querySelector("#quick");
 let input = document.querySelector("#pokemon-name");
 var idk_btn = document.querySelector(".idk-btn");
 var hint_btn = document.querySelector(".hint-btn");
+var alertDiv = document.querySelector(".alert");
 var pokemonName = "";
 var pokemonIndex = 1;
 var currentScore = 0;
@@ -109,7 +110,7 @@ input.addEventListener("input", function () {
       best.innerText = `${bestScore}`;
       localStorage.setItem("bestScore", bestScore); // Update best score in localStorage
     }
-    
+
     if (maxStreak < currentStreak) {
       maxStreak = currentStreak;
       max.innerText = `${maxStreak}`;
@@ -164,6 +165,10 @@ hint_btn.addEventListener("click", function () {
     hintNotShown = false;
     input.focus();
   }
+});
+
+alertDiv.addEventListener("click", () => {
+  alertDiv.style.visibility = "hidden"
 });
 
 function reset() {
