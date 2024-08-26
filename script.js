@@ -79,8 +79,8 @@ async function start() {
   startTimer();
   input.focus();
   pokemonIndex = Math.floor(Math.random() * 1025) + 1; // pokemon between 1 and 890
-  img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`;
   pokemonName = await fetchPokemonName();
+  img.src = `https://pediapokepedia.netlify.app/assets/pokemon-images-normal/${pokemonName}.png`;
   const color = getPokemonGeneration(pokemonName);
   document.body.style.background = color; // Set background color
   hintNotShown = true;
